@@ -12,10 +12,13 @@ struct ContentView: View {
     @State var viewModel = StarCardViewModel()
     
     var body: some View {
-        List {
-            ForEach(viewModel.cards) { card in
-                StarCardView(card: card)
+        NavigationStack {
+            List {
+                ForEach(viewModel.cards) { card in
+                    StarCardView(card: card)
+                }
             }
+            .navigationTitle("Star Wars")
         }
     }
 }
