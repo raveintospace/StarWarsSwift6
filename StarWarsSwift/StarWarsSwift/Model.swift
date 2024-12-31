@@ -53,3 +53,17 @@ struct StarCard: Identifiable, Hashable {
     let armas: [String]
     let imagen: String
 }
+
+extension StarCard {
+    static let test = StarCard(
+        id: 6629,
+        nombre: "Luke Skywalker",
+        raza: "Humano",
+        descripcion: "Héroe de la Alianza Rebelde y Caballero Jedi. Hijo de Anakin Skywalker y Padmé Amidala.",
+        planetaOrigen: "Tatooine",
+        epoca: "Era del Imperio Galáctico",
+        afiliacion: ["Alianza Rebelde", "Nueva República"],
+        habilidades: ["Uso de la Fuerza", "Combate con sable de luz", "Pilotaje"],
+        armas: ["Sable de luz"],
+        imagen: "lukeskywalker")
+}
