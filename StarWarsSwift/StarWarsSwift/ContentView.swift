@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var viewModel = StarCardViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        List {
+            ForEach(viewModel.cards) { card in
+                Text(card.nombre)
+            }
         }
-        .padding()
     }
 }
 
+// if we don't specify the vm& repository, loads the default one
 #Preview {
-    ContentView()
+    ContentView(viewModel: StarCardViewModel(repository: RepositoryTest()))
 }
